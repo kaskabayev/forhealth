@@ -48,7 +48,7 @@ html {
         li{
             height: 45px;
             width: 95px;
-            margin: 0 0 0 35px;
+            margin: 0 0 0 34px;
             text-align: center;
             display: inline-block;
             a{
@@ -84,23 +84,25 @@ html {
             }
         }
     .image-main{
-        .main-image{
-            max-width: 1357px;
+        .image-main-container{
+            height: 480px;
+            .main-image{
+                max-width: 1357px;
+                }
+            .image-main-descr{
+                width: 350px;
+                position: relative;
+                top: -450px;
+                left: 800px;
+                p{
+                    margin: 0 0 25px 0;
+                    text-align: right;
+                    color: white;
+                    font-size: 25pt;
+                    }
+                }
             }
-        .main-image-title{
-            text-align: right;
-            color: white;
-            font-size: 25pt;
-            top: 180px;
-            right: 230px;
-            position: absolute;
-            }
-        .product-image{
-            top: 270px;
-            right: 230px;
-            position: absolute;
-            }
-    }
+        }
     .catalog-product{
         margin: 50px 0 0 0;
         .catalog-product-image{
@@ -114,7 +116,7 @@ html {
             }
         .catalog-product-descr{
             float: right;
-            width: 540px;
+            width: 535px;
             margin: 0;
             text-align: left;
             p{
@@ -246,7 +248,7 @@ body{
     }
 
 .suggested-products{
-    width: 1340px;
+    width: 100%;
     margin: 0 auto 0 10px;
     border: 1px solid grey;
     border-radius: 5px;
@@ -455,7 +457,7 @@ body{
                     margin: 0 40px 0 0;
                     }
                 display: inline;
-                margin: 0 0 0 20px;
+                margin: 0 0 0 19px;
                 input{
                     width: 220px;
                     padding: 8px 8px;
