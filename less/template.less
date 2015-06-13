@@ -261,41 +261,44 @@ body{
     border-radius: 5px;
     display: inline-block;
     text-align: center;
-    .list-products{
-        width: 830px;
-        margin: 0 auto;
-        .product{
-            &:first-child{
-                margin: 0;
-                }
-            float: left;
-            text-align: left;
-            margin: 0 0 0 115px;
-            width: 200px;
-            img{
+    .slider{
+        width: 95%;
+        margin: 5% auto 0;
+        overflow: hidden;
+        ul.list-products{
+            width: 2000px;
+            position: relative;
+            list-style-type: none;
+            li{
+                display: inline-block;
+                text-align: left;
+                float: left;
+                margin: 0 60px 0 60px;
                 width: 200px;
-                height: 160px;
-                }
-            p{
-                margin: 10px 0;
-                }
-            .product-name{
-                font-weight: bold;
-                font-size: 13pt;
-                }
-            .product-descr{
-
-                font-size: 10pt;
-                }
-            a{
-                font-size: 11pt;
-                display: block;
-                width: 110px;
-                padding: 7px 10px;
-                text-align: center;
-                color: white;
-                background: #00baf0;
-                border-radius: 3px;
+                img{
+                    width: 200px;
+                    height: 160px;
+                    }
+                p{
+                    margin: 10px 0;
+                    }
+                .product-name{
+                    font-weight: bold;
+                    font-size: 13pt;
+                    }
+                .product-descr{
+                    font-size: 10pt;
+                    }
+                a{
+                    font-size: 11pt;
+                    display: block;
+                    width: 110px;
+                    padding: 7px 10px;
+                    text-align: center;
+                    color: white;
+                    background: #00baf0;
+                    border-radius: 3px;
+                    }
                 }
             }
         }
@@ -308,17 +311,17 @@ body{
             vertical-align: middle;
             }
         }
-    .slide-left, .slide-right{
+    #slide-left, #slide-right{
         width: 19px;
         height: 31px;
         position: relative;
         cursor: pointer;
         }
-    .slide-left{
+    #slide-left{
         top: -155px;
         background-image: url(../images/slide-left.png);
         }
-    .slide-right{
+    #slide-right{
         top: -185px;
         left: 1015px;
         background-image: url(../images/slide-right.png);
