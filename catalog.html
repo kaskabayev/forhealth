@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html ng-app="categories" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Forhealth</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/reset-min.css" />
+        <link rel="stylesheet/less" type="text/css" href="less/template.less" />
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/less.min.js"></script>
+        <script type="text/javascript" src="js/template.js"></script>
+        <script type="text/javascript" src="js/2gis-api.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full" data-id="dgLoader"></script>
+        
+    </head>
+    <body>
+        <div class="header">
+            <div class="middle-container">
+                <ul class="info-header">
+                    <li><img src="images/phone-ico.png"><span>+7 727 33 33 33</span></li>
+                    <li><img src="images/email-ico.png"><span>hello@forhealth.kz</span></li>
+                    <li><img src="images/geo-ico.png"><span>Офис: г. Алматы, ул. Рыскулова 35А. Режим работы: с 9:00 - 21:00</span></li>
+                    <li class = "search-button"><img src="images/search-ico.png"></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+            <div class="menu-wrapper">
+                <div class="middle-container">
+                    <ul class="menu">
+                        <li class="logo-menu"><img src="images/logo.png"></li>
+                        <li><a href="#">Главная</a></li>
+                        <li class = "active"><a href="#">Каталог</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Где купить</a></li>
+                        <div class="clearfix"></div>
+                    </ul>
+                </div>
+            </div>
+            <div class="middle-container">
+                <div class="path-to">
+                    <span>Главная </span><span>/ Каталог</span><br>
+                </div>
+            </div>
+        </div>
+        <div class="catalog-page">
+            <div class="middle-container">
+                <div class="categories" ng-controller="CategoriesController as categoryCtrl">
+                    <p>Каталог</p>
+                    <div class="category">
+                        <div class="category-title">
+                            <p>Лекарства и биологически активные добавки</p>
+                        </div>
+                        <a class="category-name" ng-class="categoryCtrl.isShown(1) ? 'open' : 'close'" href ng-click="categoryCtrl.setShown(1)">Дерматология</a>
+                        <ul ng-hide="!categoryCtrl.isShown(1)">
+                            <li><a href>ВИТИЛОУ</a></li>
+                            <li><a href>ВИТИЛОУ</a></li>
+                            <li><a href>ВИТИЛОУ</a></li>
+                            <li><a href>ВИТИЛОУ</a></li>
+                        </ul>
+                        <a class="category-name" ng-class="categoryCtrl.isShown(2) ? 'open' : 'close'" href ng-click="categoryCtrl.setShown(2)">Для мужчин</a>
+                        <ul ng-hide="!categoryCtrl.isShown(2)">
+                            <li><a href>ВИТИЛОУ</a></li>
+                        </ul>                        
+                        <a class="category-name" ng-class="categoryCtrl.isShown(3) ? 'open' : 'close'" href ng-click="categoryCtrl.setShown(3)">Для женщин</a>
+                        <ul ng-hide="!categoryCtrl.isShown(3)">
+                            <li><a href>ВИТИЛОУ</a></li>
+                        </ul>                        
+                    </div>
+                    
+                    <div class="category">
+                        <div class="category-title">
+                            <p>Мама и малыш</p>
+                        </div>
+                        <a class="category-name" href ng-click="categoryCtrl.setShown(4)">Кормление</a>
+                        <ul ng-hide="!categoryCtrl.isShown(4)">
+                            <li><a href>ВИТИЛОУ</a></li>
+                            <li><a href>ВИТИЛОУ</a></li>
+                            <li><a href>ВИТИЛОУ</a></li>
+                            <li><a href>ВИТИЛОУ</a></li>
+                        </ul>
+                        <a class="category-name" href ng-click="categoryCtrl.setShown(5)">Гигиена и уход</a>
+                        <ul ng-hide="!categoryCtrl.isShown(5)">
+                            <li><a href>ВИТИЛОУ</a></li>
+                        </ul>                        
+                        <a class="category-name" href ng-click="categoryCtrl.setShown(6)">Для мамочек</a>
+                        <ul ng-hide="!categoryCtrl.isShown(6)">
+                            <li><a href>ВИТИЛОУ</a></li>
+                        </ul>                        
+                    </div>
+                    
+                    <div class="category">
+                        <div class="category-title">
+                            <p>Контрацептивы</p>
+                        </div>
+                        <a class="category-name" href ng-click="categoryCtrl.setShown(7)">DOSUG</a>
+                        <ul ng-hide="!categoryCtrl.isShown(7)">
+                            <li><a href>ВИТИЛОУ</a></li>
+                            <li><a href>ВИТИЛОУ</a></li>
+                            <li><a href>ВИТИЛОУ</a></li>
+                            <li><a href>ВИТИЛОУ</a></li>
+                        </ul>                        
+                    </div>
+                    
+                    <div class="category">
+                        <div class="category-title">
+                            <p>Изделия медицинского назначения</p>
+                        </div>
+                        <a class="category-name" href ng-click="categoryCtrl.setShown(8)">Тест на беременность</a>
+                        <ul ng-hide="!categoryCtrl.isShown(8)">
+                            <li><a href>ВИТИЛОУ</a></li>
+                            <li><a href>ВИТИЛОУ</a></li>
+                            <li><a href>ВИТИЛОУ</a></li>
+                            <li><a href>ВИТИЛОУ</a></li>
+                        </ul>                        
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/powerlux.png">
+                        <p class="product-name">Пауерекс</p>
+                        <p class="product-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                    <div class="clearfix"></div>                        
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="subscribe">
+                <div class="middle-container">
+                    <ul class="subscribe-form">
+                        <li><span>Подпишись на рассылку и узнавай об акциях и новостях первым!</span></li>
+                        <li><input type="text" placeholder="Введите ваш e-mail"></li>
+                        <li><a href="#">Подписаться</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="black-footer another-footer">
+                <div class="middle-container">
+                    <img src="images/footer-icon.png">
+                    <ul class="info-footer">
+                        <li><img src="images/phone-ico-white.png"><span>+7 727 33 33 33</span></li>
+                        <li><img src="images/email-ico-white.png"><span>hello@forhealth.kz</span></li>
+                        <li><img src="images/geo-ico-white.png"><span>Офис: г. Алматы, ул. Рыскулова 35А. Режим работы: с 9:00 - 21:00</span></li>
+                        
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

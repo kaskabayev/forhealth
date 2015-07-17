@@ -24,7 +24,6 @@ html {
         padding: 1% 0;
         color: #5b5b5b;
         list-style-type: none;
-        border-bottom: 1px solid #e1e1e1;
         border-right: 1px solid #e1e1e1;
         li{
             border-left: 1px solid #e1e1e1;
@@ -67,7 +66,12 @@ html {
             vertical-align: middle;
             }
         }
+    .menu-wrapper{
+        border-top: 1px solid #d0d0d0;
+        border-bottom: 1px solid #d0d0d0;
+        }
     .path-to{
+        font-size: 13pt;
         margin: 15px 0 0 0;
         span{
             &:first-child{
@@ -77,10 +81,10 @@ html {
         p.path-title{
             margin: 25px 0 10px 0;
             font-weight: bold;
-            font-size: 22pt;
+            font-size: 24pt;
             }
         p.path-descr{
-            font-size: 11pt;
+            font-size: 14pt;
             }
         }
     .image-main{
@@ -614,3 +618,128 @@ body{
         display:block;
         }
 }
+.catalog-page{
+    padding: 10px 0 0 0;
+    .categories{
+        float: left;
+        width: 210px;
+        p{
+            font-weight: bold;
+            line-height: 18pt;
+            font-size: 18pt;
+            }
+        .category{
+            padding-bottom: 20px;
+            border: #d0d0d0 solid 1px;
+            border-radius: 3px;
+            margin: 20px 0 15px -25px;
+            a{
+                color: black;
+                }
+            .category-title{
+                display: table;
+                height: 40px;
+                font-weight: bold;
+                color: #00baf0;
+                padding: 5px 15px;
+                border-bottom: #d0d0d0 solid 1px;
+                p{
+                    font-size: 12pt;
+                    width: 210px;
+                    vertical-align: middle;
+                    display: table-cell; 
+                    }
+                }
+            .category-name{
+                display: block;
+                margin: 15px 0 0 15px;
+                background-image: url(../images/list-down.png);
+                background-repeat: no-repeat;
+                background-position: 200px 6px;
+                }
+            .category-name.close{
+                background-image: url(../images/close-list.png);
+                }
+            ul{
+                margin: 10px 0 10px 35px;
+                li{
+                    margin: 5px 0;
+                    list-style-type: disc;
+                    color: #00baf0;
+                    a{
+                        color: black;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .chosen{
+                background: #ededed;
+                }
+        }
+    }
+    .products{
+        margin: 0 0 35px;
+        padding: 10px 0 0 0;
+        float: left;
+        width: 814px;
+        .product{
+            background-color: azure;
+            padding: 15px 25px 30px 25px;
+            border: 1px solid #d0d0d0;
+            display: inline-block;
+            text-align: left;
+            float: left;
+            margin: 15px 0 0 15px;
+            width: 200px;
+            img{
+                width: 200px;
+                height: 160px;
+                }
+            p{
+                margin: 10px 0;
+                }
+            .product-name{
+                font-weight: bold;
+                font-size: 13pt;
+                }
+            .product-descr{
+                font-size: 10pt;
+                }
+            a{
+                font-size: 11pt;
+                display: block;
+                width: 110px;
+                padding: 7px 10px;
+                text-align: center;
+                color: white;
+                background: #00baf0;
+                border-radius: 3px;
+                }
+            }
+        }
+    }
+.about{
+    img{
+        width: 100%;
+        margin: 20px 0;
+        }
+    .about-company-title{
+        margin: 5px 0 0 0;
+        float: left;
+        width: 300px;
+        height: 300px;
+        p{
+            font-size: 26pt;
+            line-height: 24pt;
+            }
+        }
+    .about-company{
+        margin: 10px 0 50px 0;
+        float: right;
+        width: 700px;
+        p{
+            font-size: 13pt;
+            line-height: 17pt;
+            }
+        }
+    }
